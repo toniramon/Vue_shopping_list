@@ -24,10 +24,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>nombre</td>
-                    <td>cantidad</td>
-                    <td>unidad</td>
+                <tr v-for="(item, index) in items">
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.price }}</td>
                     <td></td>
                 </tr>
             </tbody>
