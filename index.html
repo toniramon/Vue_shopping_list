@@ -28,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(item, index) in items">
+                <tr v-for="(item, index) in items" :class="{ 'bg-danger text-white' : item.price < 10 }">
                     <td>{{ item.name }}</td>
                     <td>{{ item.price }}</td>
                     <td><input v-bind:value="item.quantity" @input="updateItem(index, $event.target.value)" @change="updateItem(index, $event.target.value)" type="number" class="form-control input-size" step="1" min="1"></td>
