@@ -17,3 +17,15 @@ body {
 h2 {
     font-family: ultraFresh, verdana;
 }
+
+.input-size {
+    max-width: 100px;
+}
+
+.form-inline > * {
+    margin:15px 5px;
+}
+
+.big-numbers {
+    font-size: 1.5em;
+}
