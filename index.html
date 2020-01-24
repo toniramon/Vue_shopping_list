@@ -24,6 +24,7 @@
                     <th>Name</th>
                     <th>Unit price</th>
                     <th>Quantity</th>
+                    <th>Total</th>
                     <th>Remove</th>
                 </tr>
             </thead>
@@ -32,6 +33,7 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.price }}</td>
                     <td><input v-bind:value="item.quantity" @input="updateItem(index, $event.target.value)" @change="updateItem(index, $event.target.value)" type="number" class="form-control input-size" step="1" min="1"></td>
+                    <td> {{ item.price * item.quantity }}</td>
                     <td><button v-on:click="deleteItem(index)" class="btn btn-danger">Delete Item</button></td>
                 </tr>
             </tbody>
